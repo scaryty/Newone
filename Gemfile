@@ -7,6 +7,11 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'devise'
+gem 'bootstrap-sass'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'ancestry'
 group :development, :test do  
   gem 'byebug'
 end
@@ -14,15 +19,8 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
-group :development do
+group :development, :test do
   gem 'sqlite3'
+  gem 'pg'
 end
-group :production do
-	gem 'pg'
-	gem 'rails_12factor'
-end
-gem 'devise'
-gem 'bootstrap-sass'
-gem 'omniauth'
-gem 'omniauth-facebook'
-gem 'ancestry'
+
