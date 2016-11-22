@@ -1,0 +1,38 @@
+# ScaryWorldBlog
+
+
++# TaskLightIT
++
++1) install bundle 
++
++2) rake db:migrate
++
++3) rails s
++
++
++In case it doesn't work, you may run additional migration to make gem ancestry worked properly:
++--------------
++rails g migration add_ancestry_to_posts ancestry:string
++
++
++Migration file should look like:
++---------------
++
++
++class AddAncestryToPosts < ActiveRecord::Migration
++  def self.up
++    add_column :posts, :ancestry, :string
++    add_index :posts, :ancestry
++  end
++
++  def self.down
++    remove_index :posts, :ancestry
++    remove_column :posts, :ancestry
++  end
++end
++
++If that is fine, run:
++
++rake db:migrate 
++
++rails s

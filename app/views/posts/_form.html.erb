@@ -1,0 +1,16 @@
+ <p><%if user_signed_in? %>
+ 				<%= form_for @post do |f| %> 
+  					<%= f.hidden_field :parent_id %>
+  					<p>
+    					<%= f.text_area :content, :rows => 4 %>  					
+  						<%= f.submit "Add" , :class => "btn btn-success" %>
+  					</p>
+  					<hr>
+				<% end %>	
+    <%else%>
+    	<center><h4> "Для добавления и комментирования сообщений выполните вход"</h4></center>
+    <%end%>     
+   </p>
+
+
+

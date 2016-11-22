@@ -1,0 +1,165 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+h3{
+	color: red;
+}
+
+#comment {
+  margin-left: 50px;
+}
+#comment #comment #comment #comment #comment {
+  margin-left: 0;
+}	
+
+/* Red */
+$bgDefault      : #267326;
+$bgHighlight    : #000000;
+$colDefault     : #c6ebc6;
+$colHover       : #8fd68f;  /*/
+
+
+/* --- Style --- */
+.navbar-default {
+    background-color: $bgDefault;
+    border-color: $bgHighlight;
+    .navbar-brand {
+        color: $colDefault;
+        &:hover, &:focus {
+            color: $colHover; }}
+    .navbar-nav {
+        > li {
+            > a {
+                color: $colDefault;
+                &:hover, &:focus {
+                    color: $colHover;   }}}
+        .active {
+            > a, > a:hover, > a:focus {
+                color: $colHover;
+                background-color: $bgHighlight; }}
+        .open {
+            > a, > a:hover, > a:focus {
+                color: $colHover;
+                background-color: $bgHighlight;
+                .caret {
+                    border-top-color: $colHover;
+                    border-bottom-color: $colHover; }}}
+        > .dropdown {
+            > a {
+                .caret {
+                    border-top-color: $colDefault;
+                    border-bottom-color: $colDefault; }
+                &:hover, &:focus {
+                    .caret {
+                        border-top-color: $colHover;
+                        border-bottom-color: $colHover; }}}}}
+    .navbar-toggle {
+        border-color: $bgHighlight;
+        &:hover, &:focus {
+            background-color: $bgHighlight; }
+        .icon-bar {
+            background-color: $colDefault; }}}
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: $colDefault;
+        &:hover, &:focus {
+            color: $colHover;
+            background-color: $bgHighlight; }}
+}
+
+/* Do not take in account */
+html{padding-top:30px}a.solink{position:fixed;top:0;width:100%;text-align:center;background:#f3f5f6;color:#cfd6d9;border:1px solid #cfd6d9;line-height:30px;text-decoration:none;transition:all .3s;z-index:999}a.solink::first-letter{text-transform:capitalize}a.solink:hover{color:#428bca}
+
+
+hr { background-color: #399339; height: 1px; border: 0; }
+
+p.table {
+    border-style: outset;
+    border-bottom-color: #ff0000;
+}
+
+textarea{    
+    width : 340px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.button-variant{
+  align: right;
+  font: normal 17px verdana, sans-serif;
+  height: 25px;
+  margin-right: 0px;
+  padding-right: 0px;
+  a {
+        color: #c6ebc6;
+        text-decoration: none;
+        hover: #8fd68f; 
+      }
+}
+
+.btn1 {
+    display: inline-block;
+    padding: 8px 10px;
+    margin-bottom: 0;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid;
+    border-color: #8fd68f;
+    border-radius: 10px;
+    background-color: #267326;
+    a {
+        color: #c6ebc6;
+        text-decoration: none;
+        hover: #8fd68f; 
+      }
+}
+
+.btn2 {
+    display: inline-block;
+    padding: 2px 4px;
+    margin-bottom: 0;
+    font-size: 10px;
+    line-height: 15px;    
+    vertical-align: middle;
+    border: 1px solid;
+    border-color: #8fd68f;
+    border-radius: 10px;
+    background-color: #fff;
+    a {
+        color: #000;
+        text-decoration: none;
+        hover: #000; 
+      };
+}
+btn-success2{
+    display: inline-block;
+    a {
+        color: red;
+        text-decoration: none;
+        hover: green;
+
+    };
+}

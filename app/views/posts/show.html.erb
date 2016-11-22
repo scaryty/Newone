@@ -1,0 +1,3 @@
+<%= nested_posts @post.subtree.arrange(:order => :created_at) %>
+
+<p><%= link_to "Back to All Posts", posts_path, :class => "btn btn-success" %></p>

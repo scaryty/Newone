@@ -1,0 +1,14 @@
+<div class="post">
+	<div class="content">	
+  (<%= post.created_at.strftime("%d-%m-%Y") %>
+   <%= post.created_at.strftime("%I:%M %p") %>) 
+    <b class="btn1"><%= link_to post.content, post %></b>  
+  <%if user_signed_in? %>      	
+    	<small><%= link_to "Reply", new_post_path(:parent_id => post), :class => "btn btn-success btn-xs" %></small>       
+      <%if (post.email == current_user.email) %>          
+         <small><%= link_to "Edit", edit_post_path(post),:class => "btn btn-success btn-xs"%></small> 
+    	   <small><%= link_to "Delete", post, :confirm => "Are you sure?", :method => :delete, :class => "btn btn-success btn-xs" %></small>
+      <%end%>       	      
+  <%end%>
+  </div>
+</div>

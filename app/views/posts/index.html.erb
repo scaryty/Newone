@@ -1,0 +1,4 @@
+<%= render "form" %>
+<br>
+<%= nested_posts @posts.arrange(:order => :created_at) %>
+
